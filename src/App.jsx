@@ -86,38 +86,29 @@ function App() {
       {/* Banner */}
       <Banner inProgress={inProgress} resolved={resolved} />
 
-      <div className="grid grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+  {/* Left side (CustomerTickets + Resolved Tasks) */}
+  <div className="col-span-1 lg:col-span-2 space-y-6">
+    <CustomerTickets tickets={tickets} addTask={addTask} />
 
-        {/* Left side */}
-        <div className="col-span-2 space-y-6">
+    {/* Resolved Tasks */}
+    <div className="bg-gray-800 p-4 rounded-xl shadow text-gray-200">
+      <h2 className="font-bold mb-4">Resolved Tasks</h2>
+      {resolvedTasks.length === 0 ? (
+        <p className="text-gray-400">No resolved tasks yet.</p>
+      ) : (
+        resolvedTasks.map((t) => (
+          <p key={t.id} className="mb-2 border-b border-gray-700 pb-1">
+            {t.title} ✅
+          </p>
+        ))
+      )}
+    </div>
+  </div>
 
-          {/* Customer Tickets */}
-          <CustomerTickets tickets={tickets} addTask={addTask} />
-
-          {/* Resolved Tickets */}
-          <div className="bg-gray-800 p-4 rounded-xl shadow text-gray-200">
-            <h2 className="font-bold mb-4 ">Resolved Tasks</h2>
-            {resolvedTasks.length === 0 ? (
-              <p className="text-gray-400">No resolved tasks yet.</p>
-            ) : (
-              resolvedTasks.map((t) => (
-                <p key={t.id} className="mb-2 border-b border-gray-700 pb-1">
-                  {t.title}
-                </p>
-              ))
-            )}
-          </div>
-
-        </div>
-
-        {/* Right side */}
-      <TaskStatus
-  tasks={tasks}
-  completeTask={completeTask}
-  resolvedTasks={resolvedTasks}   // <-- pass the array here
-/>
-      </div>
-
+  {/* Right side (TaskStatus) */}
+  <TaskStatus tasks={tasks} completeTask={completeTask} resolvedTasks={resolvedTasks} />
+</div>
     </div>
   );
 }

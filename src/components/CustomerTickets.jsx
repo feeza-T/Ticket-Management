@@ -13,7 +13,7 @@ function CustomerTickets({ tickets, addTask }) {
 
   return (<div>
          <h2 className="font-bold mt-4 mb-4 text-2xl">Resolved Tasks</h2>
-    <div className="grid grid-cols-2 gap-4">
+   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     
       {tickets.map((ticket) => (
         <div
