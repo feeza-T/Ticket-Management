@@ -1,0 +1,111 @@
+
+[
+  {
+    "id": 1,
+    "title": "Login page not loading",
+    "description": "User unable to access login page, showing server error.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Password reset issue",
+    "description": "Password reset email not being sent.",
+    "customer": "Karim Ahmed",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 3,
+    "title": "Dashboard slow loading",
+    "description": "Dashboard takes more than 10 seconds to load.",
+    "customer": "Nusrat Jahan",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 4,
+    "title": "Payment gateway error",
+    "description": "Payment fails during checkout process.",
+    "customer": "Tanvir Hasan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 5,
+    "title": "Profile update not saving",
+    "description": "User profile changes are not being saved.",
+    "customer": "Fatema Akter",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 6,
+    "title": "Mobile view broken",
+    "description": "Website layout breaks on mobile devices.",
+    "customer": "Sabbir Hossain",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 7,
+    "title": "Notification not working",
+    "description": "Users are not receiving system notifications.",
+    "customer": "Jannat Islam",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 8,
+    "title": "Search feature bug",
+    "description": "Search results show irrelevant data.",
+    "customer": "Rafiul Karim",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 9,
+    "title": "File upload failed",
+    "description": "Users cannot upload documents.",
+    "customer": "Mim Rahman",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 10,
+    "title": "Email verification delay",
+    "description": "Verification emails take too long to arrive.",
+    "customer": "Imran Chowdhury",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-05"
+  },
+  {
+    "id": 11,
+    "title": "API returning 500 error",
+    "description": "Backend API randomly returns 500 errors.",
+    "customer": "Shila Akter",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-05"
+  },
+  {
+    "id": 12,
+    "title": "Dark mode toggle not working",
+    "description": "Dark mode button does not change theme.",
+    "customer": "Mahmud Hasan",
+    "priority": "Low",
+    "status": "Pending",
+    "createdAt": "2026-03-05"
+  }
+]
