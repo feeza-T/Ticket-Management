@@ -4,6 +4,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import CustomerTickets from "./components/CustomerTickets";
 import TaskStatus from "./components/TaskStatus";
+import Footer from "./components/Footer";
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -29,14 +30,24 @@ function App() {
   };
 
  const completeTask = (id) => {
+  // Find the task being completed
   const task = tasks.find((t) => t.id === id);
-  if (task) {
-    setTasks(tasks.filter((t) => t.id !== id));       // remove from in-progress
-    setResolvedTasks([...resolvedTasks, task]);      // add to resolved
-    setInProgress(inProgress - 1);
-    setResolved(resolved + 1);
-    alert("Task Completed");
-  }
+  if (!task) return;
+
+  // 1️⃣ Remove from in-progress tasks
+  setTasks(tasks.filter((t) => t.id !== id));
+
+  // 2️⃣ Add to resolved tasks
+  setResolvedTasks([...resolvedTasks, task]);
+
+  // 3️⃣ Remove from Customer Tickets list
+  setTickets(tickets.filter((t) => t.id !== id));
+
+  // 4️⃣ Update counters
+  setInProgress(inProgress - 1);
+  setResolved(resolved + 1);
+
+  alert(`Task "${task.title}" completed!`);
 };
   return (
     <div className="p-8 bg-gray-950 min-h-screen text-gray-200">
@@ -109,6 +120,7 @@ function App() {
   {/* Right side (TaskStatus) */}
   <TaskStatus tasks={tasks} completeTask={completeTask} resolvedTasks={resolvedTasks} />
 </div>
+<Footer></Footer>
     </div>
   );
 }
